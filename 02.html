@@ -1,0 +1,29 @@
+<!--
+ * @Author: zhangdi 1258956799@qq.com
+ * @Date: 2023-03-07 20:29:08
+ * @LastEditors: zhangdi 1258956799@qq.com
+ * @LastEditTime: 2023-03-07 20:46:23
+ * @FilePath: /learnCanvas/01.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<html>
+ <head>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById("canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+
+        ctx.fillRect(25, 25, 100, 100);
+
+        ctx.clearRect(45, 45, 60, 60);
+        ctx.strokeRect(50, 50, 50, 50);
+      }
+    }
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="300" height="300"></canvas>
+ </body>
+</html>

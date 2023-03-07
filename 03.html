@@ -1,0 +1,64 @@
+<!--
+ * @Author: zhangdi 1258956799@qq.com
+ * @Date: 2023-03-07 20:29:08
+ * @LastEditors: zhangdi 1258956799@qq.com
+ * @LastEditTime: 2023-03-07 21:21:11
+ * @FilePath: /learnCanvas/01.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<html>
+ <head>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById("canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+
+        // 新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。
+        // ctx.beginPath();
+        // 将笔触移动到指定的坐标 x 以及 y 上
+        // ctx.moveTo(75, 50);
+        // ctx.lineTo(100, 75);
+        // ctx.lineTo(100, 25);
+        // ctx.fill()
+
+        // ctx.beginPath();
+        // ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 绘制
+        // ctx.moveTo(110, 75);
+        // ctx.arc(75, 75, 35, 0, Math.PI, false);   // 口 (顺时针)
+        // ctx.moveTo(65, 65);
+        // ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // 左眼
+        // ctx.moveTo(95, 65);
+        // ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右眼
+        // ctx.stroke();
+
+
+        //一条直线
+        // ctx.beginPath();
+        // ctx.moveTo(50, 50);
+        // ctx.lineTo(150, 50);
+        // ctx.strokeStyle = "red";
+        // ctx.stroke();
+
+        //一个圆
+        // ctx.arc(90, 65, 30, 0, Math.PI * 2, true);  // 右眼
+        // ctx.strokeStyle = "red";
+        // ctx.stroke();
+
+        // 二次贝塞尔曲线
+        //绘制二次贝塞尔曲线，cp1x,cp1y 为一个控制点，x,y 为结束点。
+        ctx.beginPath();
+        ctx.moveTo(75, 25);
+        ctx.quadraticCurveTo(25, 25, 25, 70);
+        ctx.moveTo(75, 25);
+        ctx.quadraticCurveTo(75, 50, 25, 70);
+        ctx.stroke();
+      }
+    }
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="300" height="300"></canvas>
+ </body>
+</html>
